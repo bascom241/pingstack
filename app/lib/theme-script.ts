@@ -1,0 +1,2 @@
+// Runs before first paint; only fixed, application-owned code is embedded.
+export const themeInitializationScript = `(()=>{let p="system";try{const v=localStorage.getItem("pingstack-theme");if(v==="light"||v==="dark")p=v}catch{}const t=p==="system"?(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"):p;const r=document.documentElement;r.dataset.themePreference=p;r.dataset.theme=t;r.style.colorScheme=t})()`;

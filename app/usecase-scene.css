@@ -1,0 +1,93 @@
+/* One scene, four stories. The small surfaces below belong to the device illustration. */
+.usecase-intro { max-width: 620px; margin-bottom: 40px; }
+.usecase-layout { display: grid; grid-template-columns: 1fr; }
+.usecase-stage-column { min-width: 0; }
+.usecase-stage { position: relative; width: 100%; height: 440px; overflow: hidden; }
+.usecase-renderer, .usecase-static { position: absolute; inset: 0; }
+.usecase-renderer > canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.usecase-html-layer { position: absolute; inset: 0; pointer-events: none; }
+.usecase-scene-caption { position: absolute; bottom: 8px; left: 0; right: 0; display: flex; justify-content: space-between; font-size: 11px; font-weight: 500; color: var(--muted); letter-spacing: 0.04em; pointer-events: none; }
+.usecase-mobile-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; margin-top: 20px; border-top: 1px solid var(--line); }
+.usecase-mobile-nav button { display: flex; align-items: center; gap: 9px; min-height: 52px; text-align: left; font-size: 12px; color: var(--muted); border-bottom: 1px solid var(--line); }
+.usecase-mobile-nav button span { font-size: 10px; opacity: 0.7; }
+.usecase-mobile-nav button[aria-pressed="true"] { color: var(--foreground); box-shadow: 0 2px 0 #004aad; }
+.usecase-story { padding: 36px 0 12px; }
+.usecase-story[data-active="false"] { display: none; }
+.usecase-story-index { display: flex; gap: 16px; align-items: center; margin-bottom: 22px; color: var(--muted); font-size: 13px; }
+.usecase-story-index span { color: var(--accent); font-size: 11px; }
+.usecase-story h3 { max-width: 440px; color: var(--foreground); font-size: clamp(28px, 3vw, 40px); font-weight: 600; line-height: 1.18; letter-spacing: -0.035em; }
+.usecase-story-description { margin-top: 22px; max-width: 410px; color: var(--muted); font-size: 16px; line-height: 1.8; }
+.usecase-story-detail { margin-top: 28px; color: var(--muted); font-size: 11px; letter-spacing: 0.02em; }
+.usecase-outro { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; margin-top: 52px; padding-top: 32px; border-top: 1px solid var(--line); }
+.usecase-outro p { color: var(--foreground); font-size: 18px; line-height: 1.7; font-weight: 500; }
+.usecase-outro p span { color: var(--muted); font-size: 14px; font-weight: 400; }
+
+.uc-screen { position: relative; display: flex; flex-direction: column; width: 100%; height: 100%; overflow: hidden; border-radius: 34px; background: #f1f2f4; color: #202124; font-family: 'Plus Jakarta Sans', sans-serif; }
+.uc-status { position: relative; display: flex; align-items: center; justify-content: space-between; flex: none; height: 50px; padding: 0 22px; font-size: 15px; font-weight: 600; }
+.uc-island { position: absolute; top: 13px; left: 50%; width: 74px; height: 20px; transform: translateX(-50%); border-radius: 20px; background: #101010; }
+.uc-contact { display: flex; flex-direction: column; align-items: center; gap: 7px; padding: 10px 0 19px; border-bottom: 1px solid #dfe1e5; font-size: 16px; font-weight: 600; }
+.uc-avatar { display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: #004aad; color: white; font-size: 17px; font-weight: 600; }
+.uc-contact small { font-size: 11px; color: #727780; font-weight: 400; }
+.uc-conversation { flex: 1; padding: 22px 16px; }
+.uc-time { display: block; margin-bottom: 17px; text-align: center; font-size: 11px; color: #727780; }
+.uc-message { border-radius: 16px 16px 16px 3px; padding: 16px; background: white; font-size: 16px; line-height: 1.65; color: #31343a; }
+.uc-code { padding: 21px 0 4px; text-align: center; color: #004aad; font-size: 31px; letter-spacing: 0.1em; font-weight: 600; }
+.uc-delivered { display: block; margin-top: 14px; text-align: right; font-size: 10px; color: #727780; }
+.uc-input { display: flex; flex: none; align-items: center; justify-content: space-between; height: 42px; margin: 6px 15px 20px; border: 1px solid #d6d9dd; border-radius: 25px; padding: 0 14px; font-size: 12px; color: #858a92; }
+.uc-input span { color: #004aad; font-size: 20px; }
+.usecase-static { display: flex; align-items: center; justify-content: center; padding-bottom: 20px; }
+.uc-fallback-phone { width: 206px; height: 382px; padding: 8px; border: 2px solid #484848; border-radius: 37px; background: #1b1b1b; box-shadow: 14px 18px 0 #00000009; }
+.uc-fallback-phone .uc-screen { border-radius: 27px; }
+.uc-fallback-phone .uc-status { height: 34px; font-size: 10px; padding-inline: 14px; }
+.uc-fallback-phone .uc-island { top: 8px; height: 16px; width: 56px; }
+.uc-fallback-phone .uc-contact { gap: 4px; font-size: 11px; padding: 6px 0 10px; }
+.uc-fallback-phone .uc-contact small { font-size: 9px; }
+.uc-fallback-phone .uc-avatar { height: 27px; width: 27px; font-size: 13px; }
+.uc-fallback-phone .uc-conversation { padding: 12px 10px; }
+.uc-fallback-phone .uc-message { font-size: 11px; padding: 10px; }
+.uc-fallback-phone .uc-code { font-size: 23px; padding-top: 12px; }
+.uc-fallback-phone .uc-input { height: 28px; margin: 4px 8px 10px; font-size: 9px; }
+.uc-fallback-phone .uc-delivered { font-size: 8px; }
+.uc-receipt, .uc-calendar, .uc-email { width: 100%; height: 100%; color: #292929; background: #faf9f6; font-family: 'Plus Jakarta Sans', sans-serif; }
+.uc-receipt { padding: 28px 24px; }
+.uc-paper-label { color: #004aad; font-size: 12px; letter-spacing: 0.09em; font-weight: 600; }
+.uc-receipt h4 { margin-top: 22px; font-size: 23px; font-weight: 600; letter-spacing: -0.03em; }
+.uc-receipt p { margin-top: 10px; font-size: 14px; color: #74716b; }
+.uc-paper-rule { height: 1px; margin: 23px 0; background: #ddd9d1; }
+.uc-receipt > span:not(:first-child) { display: block; font-size: 12px; color: #74716b; }
+.uc-receipt strong { display: block; margin-top: 10px; font-size: 19px; font-weight: 600; color: #004aad; }
+.uc-receipt small { font-size: 12px; line-height: 1.6; }
+.uc-calendar { padding: 28px; text-align: center; }
+.uc-calendar > span { font-size: 10px; font-weight: 600; letter-spacing: 0.05em; color: #004aad; }
+.uc-calendar strong { display: block; margin-top: 27px; font-size: 49px; line-height: 1; font-weight: 600; letter-spacing: -0.06em; }
+.uc-calendar p { margin-top: 14px; font-size: 16px; }
+.uc-calendar-rule { height: 3px; width: 26px; margin: 23px auto 16px; background: #004aad; }
+.uc-calendar small { font-size: 12px; color: #74716b; }
+.uc-email { border-radius: 7px; overflow: hidden; }
+.uc-email-toolbar { display: flex; justify-content: space-between; padding: 18px 24px; border-bottom: 1px solid #ddd9d1; font-size: 12px; color: #74716b; }
+.uc-email-body { padding: 26px 30px; }
+.uc-email h4 { font-size: 28px; line-height: 1.2; letter-spacing: -0.04em; font-weight: 600; margin-top: 19px; }
+.uc-email p { margin-top: 17px; font-size: 15px; line-height: 1.7; color: #66615c; }
+.uc-email .uc-paper-rule { margin: 18px 0; }
+.uc-email-action { display: inline-block; margin-top: 18px; padding: 12px 17px; border-radius: 4px; background: #004aad; font-size: 13px; color: white; }
+.uc-email small { display: block; margin-top: 21px; font-size: 11px; color: #74716b; }
+
+@media (min-width: 640px) { .usecase-stage { height: 530px; } }
+@media (min-width: 1024px) {
+  .usecase-intro { margin-bottom: 64px; }
+  .usecase-layout { grid-template-columns: 1.2fr 0.8fr; column-gap: 80px; align-items: start; }
+  .usecase-stage-column { position: sticky; top: 24px; }
+  .usecase-stage { height: min(640px, calc(100svh - 64px)); min-height: 380px; }
+  .usecase-mobile-nav { display: none; }
+  .usecase-story, .usecase-story[data-active="false"] { display: flex; flex-direction: column; justify-content: center; min-height: 72svh; padding-block: 70px; }
+  .usecase-story[data-active="false"] .usecase-story-index { opacity: 0.5; }
+  .usecase-story-description { font-size: 17px; }
+  .usecase-outro { margin-top: 48px; }
+}
+@media (prefers-reduced-motion: no-preference) { .usecase-mobile-nav button { transition: color 200ms ease; } }
+
+/* Without JavaScript, all four stories remain available in normal document flow. */
+html:not([data-theme]) .usecase-story[data-active="false"] { display: block; }
+html:not([data-theme]) .usecase-mobile-nav { display: none; }
+
+.uc-avatar { background: #004aad url("/brand/pingstack-logo.jpg") center / cover no-repeat; }
