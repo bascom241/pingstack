@@ -1,8 +1,9 @@
-const appUrl = process.env.NEXT_PUBLIC_APP_URL?.replace(/\/$/, "");
+const appUrl = process.env.NEXT_PUBLIC_APP_URL?.trim().replace(/\/+$/, "") || "https://pingstackapp.vercel.app";
 
 export const siteLinks = {
-  getStarted: appUrl ? `${appUrl}/register` : "mailto:support@pingstack.com?subject=Get%20started%20with%20PingStack",
-  login: appUrl ? `${appUrl}/login` : "mailto:support@pingstack.com?subject=PingStack%20account%20access",
-  hasAppUrl: Boolean(appUrl),
+  getStarted: `${appUrl}/`,
+  register: `${appUrl}/`,
+  login: `${appUrl}/`,
+  hasAppUrl: true,
   contact: "mailto:support@pingstack.com",
 };

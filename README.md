@@ -37,7 +37,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## Landing page links
 
-Set `NEXT_PUBLIC_APP_URL` to the deployed dashboard origin before building to connect Get started to `/register` and Log in to `/login`. Without it, calls to action open an email to `support@pingstack.com`. See `.env.example`. Pricing enquiries use the same support address; rates are not published until confirmed.
+Get started, registration, and Log in open `https://pingstackapp.vercel.app/`. Set `NEXT_PUBLIC_APP_URL` before building to override the dashboard entry URL. See `.env.example`. Pricing enquiries use the same support address; rates are not published until confirmed.
 
 The developer examples match the local backend request contracts. Set `baseUrl`, a server-side `accessToken`, and an owned `savedTemplateId` before using them. Examples do not send live requests from this landing page.
 
