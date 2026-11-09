@@ -48,7 +48,7 @@ export default function MessagingWorkflow() {
             <div className="relative"><Image src={preview.image} alt={preview.alt} width={preview.width} height={preview.height} sizes="(max-width: 768px) 100vw, 1120px" className="h-auto w-full" /><div aria-hidden="true" className="workspace-focus" style={{ left: `${preview.focus.x * 100}%`, top: `${preview.focus.y * 100}%`, width: `${preview.focus.w * 100}%`, height: `${preview.focus.h * 100}%` }} /></div>
           </div>
           {show3D && <WorkspaceScene selected={selected} onStatus={updateStatus} />}
-          <div className="workspace-stage-label"><span>Product preview</span><span>{ready ? "Choose a feature · Inspect a detail" : "Choose a feature to explore"}</span></div>
+          <div className="workspace-stage-label"><span>Product preview</span><span>Choose a feature to explore</span></div>
         </div>
 
         <div ref={tabs} role="tablist" aria-label="Explore workspace features" className="workspace-tabs">

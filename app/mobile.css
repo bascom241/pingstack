@@ -1,0 +1,79 @@
+/* Mobile reading and touch sizing. Keep desktop composition unchanged. */
+@media (max-width: 639px) {
+  html { scroll-padding-top: 20px; -webkit-text-size-adjust: 100%; }
+  body { min-width: 0; }
+  main, main > section, .footer-inner { min-width: 0; max-width: 100%; }
+  main > section h1, main > section h2, main > section h3,
+  .footer-inner p, .footer-inner a { overflow-wrap: anywhere; }
+  main > section > div, .workspace-intro > *, .workspace-feature-row > *,
+  .closing-layout > *, .footer-top > *, .footer-navigation > nav { min-width: 0; }
+  main > section h1 { font-size: clamp(38px, 10.4vw, 54px); line-height: 1.12; }
+  main > section h2 { font-size: clamp(34px, 9.3vw, 44px); line-height: 1.15; }
+  main > section p.text-sm:not(.uppercase), main > section p.text-xs,
+  main > section li.text-sm, #developers ul, #api-notes summary { font-size: 16px; line-height: 1.75; }
+  main > section p.text-lg { font-size: 19px; line-height: 1.75; }
+  main > section a.text-sm { font-size: 16px; }
+  main > section :is(button, summary, select) { min-height: 44px; }
+  main > section a.rounded-xl { min-height: 48px; }
+  .site-header { padding-inline: 16px; }
+  .site-header > div, .site-header > div > div { gap: 8px; }
+  .site-wordmark { gap: 7px; font-size: 19px; }
+  .site-wordmark img { width: 30px !important; height: 30px !important; }
+  #color-theme { width: 98px; min-height: 44px; font-size: 12px; }
+  .site-header summary { min-height: 44px; min-width: 44px; }
+  .showcase-card h2 { font-size: clamp(33px, 8.7vw, 40px); }
+  .showcase-card p { font-size: 18px; line-height: 1.75; }
+  .showcase-card a { font-size: 16px; min-height: 44px; }
+  .showcase-title { font-size: 24px; }
+  .workspace-intro { gap: 24px; margin-bottom: 30px; }
+  .workspace-intro > p, .workspace-feature-copy p { font-size: 18px; line-height: 1.8; }
+  .workspace-stage { height: clamp(240px, 65vw, 410px); }
+  .workspace-flat { width: 100%; }
+  .workspace-stage-label { font-size: 11px; gap: 8px; }
+  .workspace-tabs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .workspace-tabs button { min-height: 72px; font-size: 15px; gap: 8px; padding-inline: 5px; }
+  .workspace-tabs svg { flex-shrink: 0; }
+  .workspace-feature-copy h3 { font-size: 28px; }
+  .workspace-step-controls button { width: 46px; height: 46px; }
+  .workspace-step-controls span { font-size: 13px; }
+  .workspace-actions > a { min-height: 44px; font-size: 16px; }
+  .usecase-mobile-nav { column-gap: 14px; }
+  .usecase-mobile-nav button { font-size: 15px; min-height: 62px; }
+  .usecase-story h3 { font-size: 34px; }
+  .usecase-story-description { font-size: 18px; line-height: 1.8; }
+  .usecase-story-index { font-size: 15px; }
+  .usecase-story-detail { font-size: 14px; line-height: 1.7; }
+  .usecase-stage { height: 480px; }
+  .uc-fallback-phone { width: 238px; height: 428px; }
+  .uc-fallback-phone .uc-message { font-size: 14px; line-height: 1.65; }
+  .uc-fallback-phone .uc-contact { font-size: 13px; }
+  .uc-fallback-phone .uc-input { font-size: 11px; min-height: 32px; }
+  .developer-panel { width: 100%; min-width: 0; }
+  .developer-endpoint { overflow-wrap: anywhere; font-size: 13px; padding-inline: 18px; }
+  #api-code, :root[data-theme="dark"] #api-code { max-width: 100%; font-size: 14px; line-height: 1.85; padding: 18px; white-space: pre-wrap; overflow-wrap: anywhere; }
+  .developer-response pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 13px; }
+  .developer-note { font-size: 15px !important; }
+  #faq summary { font-size: 18px; line-height: 1.65; }
+  #faq details > p { font-size: 17px; line-height: 1.85; padding-right: 0; }
+  .closing-layout h2 { font-size: clamp(40px, 10.8vw, 52px); }
+  .closing-description { font-size: 18px; line-height: 1.8; }
+  .closing-secondary { font-size: 16px; gap: 12px; }
+  .closing-secondary a { min-height: 44px; }
+  .closing-kicker, .closing-footnote { font-size: 12px; line-height: 1.75; }
+  .closing-kicker { flex-wrap: wrap; }
+  .closing-scene-caption { font-size: 13px; }
+  .footer-brand-column > p { font-size: 16px; }
+  .footer-contact > span:first-child { font-size: 13px; }
+  .footer-contact > span:last-child { font-size: 16px; }
+  .footer-navigation { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 16px; }
+  .footer-navigation h3 { font-size: 15px; margin-bottom: 14px; }
+  .footer-navigation li a { font-size: 16px; min-height: 44px; display: inline-flex; align-items: center; }
+  .footer-navigation ul { gap: 6px; }
+  .footer-bottom { font-size: 13px; }
+  .footer-top-link { min-height: 44px; }
+}
+@media (max-width: 639px) and (prefers-reduced-motion: no-preference) {
+  .usecase-story[data-active="true"] { animation: mobile-story-enter 400ms ease-out both; }
+  a, button, summary { -webkit-tap-highlight-color: rgb(0 74 173 / 12%); }
+}
+@keyframes mobile-story-enter { from { opacity: 0.4; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }

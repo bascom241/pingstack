@@ -4,6 +4,7 @@ import "./globals.css";
 import "./usecase-scene.css";
 import "./workspace.css";
 import "./closing.css";
+import "./mobile.css";
 import Navbar from "./components/Navbar";
 import { themeInitializationScript } from "./lib/theme-script";
 
